@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="precipitation <= 8.25\ngini = 0.449\nsamples = 14\nvalue = [2, 2, 10]\nclass = rain", fillcolor="#ab7bee"] ;
+1 [label="temp_min <= 14.7\ngini = 0.278\nsamples = 12\nvalue = [2, 0, 10]\nclass = rain", fillcolor="#9a61ea"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="wind <= 1.6\ngini = 0.165\nsamples = 11\nvalue = [1, 0, 10]\nclass = rain", fillcolor="#8e4de8"] ;
+1 -> 2 ;
+3 [label="temp_max <= 10.8\ngini = 0.5\nsamples = 2\nvalue = [1, 0, 1]\nclass = drizzle", fillcolor="#ffffff"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]\nclass = rain", fillcolor="#8139e5"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]\nclass = drizzle", fillcolor="#e58139"] ;
+3 -> 5 ;
+6 [label="gini = 0.0\nsamples = 9\nvalue = [0, 0, 9]\nclass = rain", fillcolor="#8139e5"] ;
+2 -> 6 ;
+7 [label="gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]\nclass = drizzle", fillcolor="#e58139"] ;
+1 -> 7 ;
+8 [label="gini = 0.0\nsamples = 2\nvalue = [0, 2, 0]\nclass = fog", fillcolor="#39e581"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
